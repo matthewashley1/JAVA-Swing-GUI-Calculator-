@@ -20,7 +20,10 @@ public class Calculator extends JFrame{
     private int ButtonPresses = 0;
     private Double temp = 0.0;
     private Double temp2 = 0.0;
+    private Double temp3 = 0.0;
     private char symbol;
+    private char place;
+    private int Decimalplace = 10;
 
     public Calculator() {
 
@@ -55,12 +58,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 1.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -75,12 +89,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 2.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -95,12 +120,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 3.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -115,12 +151,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 4.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -135,12 +182,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 5.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -155,12 +213,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 6.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -175,12 +244,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 7.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -195,12 +275,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 8.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -215,12 +306,23 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 9.0;
-                        for (int x =0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                        CalTotal = temp;
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -235,21 +337,32 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        temp = 0.0;
                         array [ButtonPresses] = 0.0;
-                        for (int x = 0; x <= ButtonPresses; x++) {
-                            temp = (temp * 10) + array [x];
+                        if (place != '.') {
+                            temp = 0.0;
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp = (temp * 10) + array[x];
+                            }
                         }
-                    CalTotal = temp;
-                    ButtonPresses++;
-                    updateTotal();
+                        if (place == '.') {
+                            temp3 = 0.0;
+                            for (int x = 0; x <= ButtonPresses; x++) {
+                                temp3 = (temp3 + (array [x] / Decimalplace));
+                                Decimalplace = (Decimalplace * 10);
+                            }
+                        }
+                        Decimalplace = 10;
+                        CalTotal = (temp + temp3);
+                        ButtonPresses++;
+                        updateTotal();
                     }
                 }
         );
         panel.add(Zero);
 
         Equal = new JButton("=");
-        Equal.setBounds(100, 285, 195, 42);
+        Equal.setBounds(100, 283, 195, 43);
         Equal.setFont(new Font("", Font.ITALIC, 20));
         Equal.setBackground(Color.green);
         Equal.setBorderPainted(false);
@@ -283,6 +396,8 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        place = '.';
+                        ButtonPresses = 0;
 
                     }
                 }
@@ -290,7 +405,7 @@ public class Calculator extends JFrame{
         panel.add(Decimal);
 
         Add = new JButton("+");
-        Add.setBounds(195, 58, 100, 45);
+        Add.setBounds(195, 58, 100, 43);
         Add.setFont(new Font("", Font.ITALIC, 20));
         Add.setBackground(Color.ORANGE);
         Add.setBorderPainted(false);
@@ -301,8 +416,10 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         ButtonPresses = 0;
                         temp2 = CalTotal;
+                        temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '+';
+                        place = 'c';
                         updateTotal();
 
                     }
@@ -311,7 +428,7 @@ public class Calculator extends JFrame{
         panel.add(Add);
 
         Subtract = new JButton("-");
-        Subtract.setBounds(195, 103, 100, 45);
+        Subtract.setBounds(195, 103, 100, 43);
         Subtract.setFont(new Font("", Font.ITALIC, 20));
         Subtract.setBackground(Color.ORANGE);
         Subtract.setBorderPainted(false);
@@ -322,8 +439,10 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         ButtonPresses = 0;
                         temp2 = CalTotal;
+                        temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '-';
+                        place = 'c';
                         updateTotal();
 
                     }
@@ -332,7 +451,7 @@ public class Calculator extends JFrame{
         panel.add(Subtract);
 
         Divide = new JButton("/");
-        Divide.setBounds(195, 148, 100, 45);
+        Divide.setBounds(195, 148, 100, 43);
         Divide.setFont(new Font("", Font.ITALIC, 20));
         Divide.setBackground(Color.ORANGE);
         Divide.setBorderPainted(false);
@@ -343,8 +462,10 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         ButtonPresses = 0;
                         temp2 = CalTotal;
+                        temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '/';
+                        place = 'c';
                         updateTotal();
 
                     }
@@ -353,7 +474,7 @@ public class Calculator extends JFrame{
         panel.add(Divide);
 
         Multiple = new JButton("*");
-        Multiple.setBounds(195, 193, 100, 45);
+        Multiple.setBounds(195, 193, 100, 43);
         Multiple.setFont(new Font("", Font.ITALIC, 20));
         Multiple.setBackground(Color.ORANGE);
         Multiple.setBorderPainted(false);
@@ -364,8 +485,10 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         ButtonPresses = 0;
                         temp2 = CalTotal;
+                        temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '*';
+                        place = 'c';
                         updateTotal();
 
                     }
@@ -374,7 +497,7 @@ public class Calculator extends JFrame{
         panel.add(Multiple);
 
         Clear = new JButton("C");
-        Clear.setBounds(195, 238, 100, 45);
+        Clear.setBounds(195, 238, 100, 43);
         Clear.setFont(new Font("", Font.ITALIC, 20));
         Clear.setBackground(Color.ORANGE);
         Clear.setBorderPainted(false);
@@ -385,6 +508,10 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         ButtonPresses = 0;
                         CalTotal = 0.0;
+                        temp = 0.0;
+                        temp2 = 0.0;
+                        temp3 = 0.0;
+                        place = 'c';
                         updateTotal();
                     }
                 }
