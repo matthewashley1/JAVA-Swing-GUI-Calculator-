@@ -9,11 +9,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
 
 public class Calculator extends JFrame{
 
-    private JButton One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Zero, Decimal, Add, Subtract, Divide, Multiple, Equal, Clear;
+    private JButton One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Zero, Decimal, Add, Subtract, Divide, Multiple, Equal, Clear, Parentheses;
     private JLabel Total;
 
     private Double CalTotal = 0.0;
@@ -24,6 +25,8 @@ public class Calculator extends JFrame{
     private char symbol;
     private char place;
     private int Decimalplace = 10;
+
+    DecimalFormat df = new DecimalFormat(".######");
 
     public Calculator() {
 
@@ -362,7 +365,7 @@ public class Calculator extends JFrame{
         panel.add(Zero);
 
         Equal = new JButton("=");
-        Equal.setBounds(100, 283, 195, 43);
+        Equal.setBounds(195, 283, 100, 43);
         Equal.setFont(new Font("", Font.ITALIC, 20));
         Equal.setBackground(Color.green);
         Equal.setBorderPainted(false);
@@ -388,6 +391,19 @@ public class Calculator extends JFrame{
                 }
         );
         panel.add(Equal);
+
+        Parentheses = new JButton("( )");
+        Parentheses.setBounds(95, 280, 100, 50);
+        Parentheses.setFont(new Font("", Font.ITALIC, 20));
+        Parentheses.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+                    }
+                }
+        );
+        panel.add(Parentheses);
 
         Decimal = new JButton(".");
         Decimal.setBounds(0, 280, 100, 50);
@@ -523,7 +539,7 @@ public class Calculator extends JFrame{
 
     private void updateTotal() {
 
-        Total.setText(String.valueOf(CalTotal));
+        Total.setText(String.valueOf(df.format(CalTotal)));
 
     }
 
