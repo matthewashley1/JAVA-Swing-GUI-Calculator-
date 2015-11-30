@@ -430,8 +430,10 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        if (ButtonPresses > 0) {
+                            temp2 = CalTotal;
+                        }
                         ButtonPresses = 0;
-                        temp2 = CalTotal;
                         temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '+';
@@ -453,8 +455,10 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        if (ButtonPresses > 0) {
+                            temp2 = CalTotal;
+                        }
                         ButtonPresses = 0;
-                        temp2 = CalTotal;
                         temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '-';
@@ -476,8 +480,10 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        if (ButtonPresses > 0) {
+                            temp2 = CalTotal;
+                        }
                         ButtonPresses = 0;
-                        temp2 = CalTotal;
                         temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '/';
@@ -499,8 +505,10 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        if (ButtonPresses > 0) {
+                            temp2 = CalTotal;
+                        }
                         ButtonPresses = 0;
-                        temp2 = CalTotal;
                         temp = 0.0;
                         CalTotal = 0.0;
                         symbol = '*';
