@@ -19,12 +19,13 @@ public class Calculator extends JFrame{
 
     private Double CalTotal = 0.0;
     private int ButtonPresses = 0;
-    private Double temp = 0.0;
-    private Double temp2 = 0.0;
-    private Double temp3 = 0.0;
+    private Double WholeNumber = 0.0;
+    private Double NumberStorage = 0.0;
+    private Double DecimalNumber = 0.0;
     private char symbol;
     private char place;
-    private int Decimalplace = 10;
+    private int DecimalPlace = 10;
+    private int EqualVar = 0;
 
     DecimalFormat df = new DecimalFormat(".######");
 
@@ -63,21 +64,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 1.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -94,21 +95,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 2.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -125,21 +126,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 3.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -156,21 +157,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 4.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -187,21 +188,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 5.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -218,21 +219,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 6.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -249,21 +250,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 7.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -280,21 +281,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 8.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -311,21 +312,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 9.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -342,21 +343,21 @@ public class Calculator extends JFrame{
                     public void actionPerformed(ActionEvent e) {
                         array [ButtonPresses] = 0.0;
                         if (place != '.') {
-                            temp = 0.0;
-                            temp3 = 0.0;
+                            WholeNumber = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp = (temp * 10) + array[x];
+                                WholeNumber = (WholeNumber * 10) + array[x];
                             }
                         }
                         if (place == '.') {
-                            temp3 = 0.0;
+                            DecimalNumber = 0.0;
                             for (int x = 0; x <= ButtonPresses; x++) {
-                                temp3 = (temp3 + (array [x] / Decimalplace));
-                                Decimalplace = (Decimalplace * 10);
+                                DecimalNumber = (DecimalNumber + (array [x] / DecimalPlace));
+                                DecimalPlace = (DecimalPlace * 10);
                             }
                         }
-                        Decimalplace = 10;
-                        CalTotal = (temp + temp3);
+                        DecimalPlace = 10;
+                        CalTotal = (WholeNumber + DecimalNumber);
                         ButtonPresses++;
                         updateTotal();
                     }
@@ -375,17 +376,19 @@ public class Calculator extends JFrame{
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         if (symbol == '+') {
-                            CalTotal = (temp2 + CalTotal);
+                            CalTotal = (NumberStorage + CalTotal);
                         }
                         if (symbol == '-') {
-                            CalTotal = (temp2 - CalTotal);
+                            CalTotal = (NumberStorage - CalTotal);
                         }
                         if (symbol == '/') {
-                            CalTotal = (temp2 / CalTotal);
+                            CalTotal = (NumberStorage / CalTotal);
                         }
                         if (symbol == '*') {
-                            CalTotal = (temp2 * CalTotal);
+                            CalTotal = (NumberStorage * CalTotal);
                         }
+                        ButtonPresses = 0;
+                        EqualVar = 1;
                         updateTotal();
                     }
                 }
@@ -430,11 +433,12 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        if (ButtonPresses > 0) {
-                            temp2 = CalTotal;
+                        if (ButtonPresses > 0 || EqualVar == 1) {
+                            NumberStorage = CalTotal;
                         }
                         ButtonPresses = 0;
-                        temp = 0.0;
+                        EqualVar = 0;
+                        WholeNumber = 0.0;
                         CalTotal = 0.0;
                         symbol = '+';
                         place = 'c';
@@ -455,11 +459,12 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        if (ButtonPresses > 0) {
-                            temp2 = CalTotal;
+                        if (ButtonPresses > 0 || EqualVar == 1) {
+                            NumberStorage = CalTotal;
                         }
                         ButtonPresses = 0;
-                        temp = 0.0;
+                        EqualVar = 0;
+                        WholeNumber = 0.0;
                         CalTotal = 0.0;
                         symbol = '-';
                         place = 'c';
@@ -480,11 +485,12 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        if (ButtonPresses > 0) {
-                            temp2 = CalTotal;
+                        if (ButtonPresses > 0 || EqualVar == 1) {
+                            NumberStorage = CalTotal;
                         }
                         ButtonPresses = 0;
-                        temp = 0.0;
+                        EqualVar = 0;
+                        WholeNumber = 0.0;
                         CalTotal = 0.0;
                         symbol = '/';
                         place = 'c';
@@ -505,11 +511,12 @@ public class Calculator extends JFrame{
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        if (ButtonPresses > 0) {
-                            temp2 = CalTotal;
+                        if (ButtonPresses > 0 || EqualVar == 1) {
+                            NumberStorage = CalTotal;
                         }
                         ButtonPresses = 0;
-                        temp = 0.0;
+                        EqualVar = 0;
+                        WholeNumber = 0.0;
                         CalTotal = 0.0;
                         symbol = '*';
                         place = 'c';
@@ -531,10 +538,11 @@ public class Calculator extends JFrame{
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         ButtonPresses = 0;
+                        EqualVar = 0;
                         CalTotal = 0.0;
-                        temp = 0.0;
-                        temp2 = 0.0;
-                        temp3 = 0.0;
+                        WholeNumber = 0.0;
+                        NumberStorage = 0.0;
+                        DecimalNumber = 0.0;
                         place = 'c';
                         updateTotal();
                     }
